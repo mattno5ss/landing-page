@@ -1,20 +1,27 @@
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 header {
+  flex: none;
+  height: 3rem;
   background-color: #1f2937;
   color: white;
-  margin: 0 -0.5em;
   display: flex;
   justify-content: space-between;
-  padding: 1em 9em;
+  padding: 1rem 9rem;
 
 }
 
 .header-links {
   display: flex;
-  gap: 30px;
+  gap: 2rem;
 }
 
 .header-links > a {
@@ -23,21 +30,24 @@ header {
 }
 
 .main-container {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.section-1, .section-2, .section-3, .section-4 {
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
   flex: 1;
-  margin: 0 -0.5em;
 }
 
 .section-1 {
   background-color: #1f2937;
   display: flex;
   justify-content: center;
-  padding: 5em 9em;
-  gap: 3em;
+  padding: 5rem 9rem;
+  gap: 3rem;
 }
 
 .hero {
@@ -60,10 +70,10 @@ header {
   border: none;
   border-radius: 10px;
   color: white;
-  padding: 0.5em 2em;
+  padding: 0.5rem 2rem;
   font-size: 18px;
   font-weight: bold;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .s1-img {
@@ -80,33 +90,32 @@ header {
 
 .s2-imgs {
   display: flex;
-  margin: 3em 15em 7em 15em;
+  justify-content: center;
+  margin-bottom: 7rem;
 }
 
 figure {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
   text-align: center;
-  margin: 0;
 }
 
 .fig {
   border: 3px solid #3882f6;
   border-radius: 15px;
-  padding: 3em;
+  padding: 3rem;
 }
 
 .section-3 {
   background-color: #e5e7eb;
-  padding: 7em;
+  padding: 7rem 0rem;
 }
 
 .s3-quote {
   display: flex;
   flex-direction: column;
-  padding: 0 7em;
+  margin: 0rem 10rem;
 }
 
 blockquote {
@@ -114,12 +123,14 @@ blockquote {
   font-weight: light;
   font-style: italic;
   color: #1f2937;
+  margin: 0;
 }
 
 cite {
   font-weight: bold;
   display: flex;
   justify-content: end;
+  margin-top: 1rem;
 }
 
 .section-4 {
@@ -133,8 +144,8 @@ cite {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  margin: 7em 13em;
-  padding: 3em 7em;
+  margin: 7rem 13rem;
+  padding: 3rem 7rem;
 }
 
 .s4-title {
@@ -147,16 +158,29 @@ cite {
   border: 2px solid white;
   border-radius: 10px;
   color: white;
-  padding: 0.5em 2em;
+  padding: 0.5rem 2rem;
   font-size: 18px;
   font-weight: bold;
 }
 
 footer {
+  flex: none;
+  height: 3rem;
   background-color: #1f2937;
   color: #e5e7eb;
-  margin: 0 -0.5em;
-  padding: 0.5em;
   display: flex;
   justify-content: center;
+}
+
+button:hover {
+  filter: brightness(115%);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.header-links > a:hover {
+  color: white;
 }
